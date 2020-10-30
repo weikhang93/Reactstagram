@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { ListGroupItem } from 'reactstrap'
 import {Link} from 'react-router-dom'
+import LikersModal from '../component/LikersModal'
 
 const Likes = (props) => {
     const [liked, setLiked] = useState("black")
     const [numberoflikes, setNumberOfLikes] = useState(null)
     const [imageowner,setImageOwner]=useState({})
+    const [likers,setLikers]=useState([])
 
     const { image_id, userdetail } = props
     const parseuserdetail = JSON.parse(userdetail)
@@ -25,6 +27,9 @@ const Likes = (props) => {
             .then((res) => {
                 setImageOwner(res.data.owner)
                 setNumberOfLikes(res.data.likes.length)
+                setLikers(res.data.likes)
+
+
                 res.data.likes.forEach(element => {
                     if (element.id === parseuserdetail.id) {
                         setLiked("blue")
@@ -36,7 +41,7 @@ const Likes = (props) => {
                 console.log(err.response)
 
             })
-    }, [image_id, parseuserdetail.id])
+    }, [image_id, parseuserdetail.id,liked])
 
     const handleHover = (e) => {
         //   e.target.style.color="blue"
@@ -77,7 +82,7 @@ const Likes = (props) => {
 
     return <>
         
-        <ListGroupItem style={{ width: "100%", display: "flex" }} >
+        <ListGroupItem className="mt-3" style={{ width: "100%", display: "flex" }} >
             <div style={{marginLeft:"auto"}}>
                 Picture is owned by 
                 <Link to={`/user/${imageowner.userid}`}>
@@ -85,8 +90,11 @@ const Likes = (props) => {
                 {imageowner.username}
                 </Link>
             </div>
+            
+            <LikersModal likers={likers} buttonLabel={"Show who liked?"}></LikersModal>
+            
             <div style={{marginLeft:"auto"}}>
-
+            
             <span className="mr-2">
                 {numberoflikes}
             </span>

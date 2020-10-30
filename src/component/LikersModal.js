@@ -15,7 +15,7 @@ const LikersModal = (props) => {
   const toggle = () => setModal(!modal);
 
   return (
-    <div className="d-flex justify-content-end mb-2 mr-4">
+    <div className="d-flex justify-content-end ml-5">
       <Button color="secondary" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Likers</ModalHeader>

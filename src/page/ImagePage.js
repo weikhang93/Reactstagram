@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import {ListGroup } from 'reactstrap'
 import Likes from '../container/Likes'
 import Comments from '../container/Comments'
-import LikersModal from '../component/LikersModal'
+// import LikersModal from '../component/LikersModal'
 
 
 const ImagePage = (props) => {
@@ -39,7 +39,7 @@ const ImagePage = (props) => {
 
             <img src={image} alt="selectedparticularimage" ></img>
         </div>
-        <LikersModal likers={likers} buttonLabel={"Show who liked?"}></LikersModal>
+        {/* <LikersModal likers={likers} buttonLabel={"Show who liked?"}></LikersModal> */}
 
         
          <Likes userdetail={userdetail}  image_id={params.id} ></Likes>
