@@ -49,7 +49,7 @@ const SignUpForm = (props) => {
         toggle()
         e.preventDefault()
         Axios({
-            url:'http://localhost:5000/api/users/',
+            url:'https://flasktagram.herokuapp.com/api/users/',
             method:"POST",
             data:{
                 username:username,
@@ -79,7 +79,7 @@ const SignUpForm = (props) => {
       }
       if (username.length>=6){
           Axios({
-              url:`http://localhost:5000/api/users/check_name?username=${username}`,
+              url:`https://flasktagram.herokuapp.com/api/users/check_name?username=${username}`,
               method:"GET"
             
 

@@ -18,7 +18,7 @@ const Likes = (props) => {
 
     useEffect(() => {
         Axios({
-            url: `http://localhost:5000/api/images/${image_id}/likes`,
+            url: `https://flasktagram.herokuapp.com/api/images/${image_id}/likes`,
             method: "GET",
 
 
@@ -54,7 +54,7 @@ const Likes = (props) => {
 
     const handleLike = (e) => {
         Axios({
-            url: `http://localhost:5000/api/images/${image_id}/toggle_like`,
+            url: `https://flasktagram.herokuapp.com/api/images/${image_id}/toggle_like`,
             method: "POST",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("jwt")}`

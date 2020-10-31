@@ -22,7 +22,7 @@ const ImagePage = (props) => {
 
     useEffect(() => {
         Axios({
-            url: `http://localhost:5000/api/images/${params.id}/likes`,
+            url: `https://flasktagram.herokuapp.com/api/images/${params.id}/likes`,
             method: "GET"
         })
             .then((response) => {

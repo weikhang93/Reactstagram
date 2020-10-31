@@ -31,7 +31,7 @@ const ProfileImageUploadModal = (props) => {
         newForm.append("profileImage",profileImage)
 
         Axios({
-            url:"http://localhost:5000/api/users/profileImage",
+            url:"https://flasktagram.herokuapp.com/api/users/profileImage",
             method:"POST",
             headers:{
                 Authorization:"Bearer "+localStorage.getItem("jwt")

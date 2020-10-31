@@ -41,7 +41,7 @@ const UploadModal = (props) => {
         setPreviewImage(uploadinggif)
 
         Axios({
-            url: "http://localhost:5000/api/images/",
+            url: "https://flasktagram.herokuapp.com/api/images/",
             method: "POST",
             headers: {
                 Authorization: "Bearer " + localStorage.getItem("jwt")

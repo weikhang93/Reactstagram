@@ -20,7 +20,7 @@ const LoginForm = (props) => {
         toggle()
         e.preventDefault()
         Axios({
-            url:"http://localhost:5000/api/login/",
+            url:"https://flasktagram.herokuapp.com/api/login/",
             method:"POST",
             data:{
                 username:username,

@@ -14,7 +14,7 @@ const UserProfilePage = () => {
     useEffect(() => {
 
         Axios({
-            url: `http://localhost:5000/api/users/${params.id}`,
+            url: `https://flasktagram.herokuapp.com/api/users/${params.id}`,
             method: "GET"
         })
             .then((response) => {

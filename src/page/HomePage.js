@@ -21,7 +21,7 @@ const HomePage = () => {
     useEffect(() => {
 
         axios({
-            url: "http://localhost:5000/api/users",
+            url: "https://flasktagram.herokuapp.com/api/users",
             method: "GET"
         })
             .then((result) => {

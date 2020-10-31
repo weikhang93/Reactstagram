@@ -18,7 +18,7 @@ const Comment = (props) => {
     useEffect(() => {
         // console.log("run again")
         Axios({
-            url: `http://localhost:5000/api/images/${image_id}/comments`,
+            url: `https://flasktagram.herokuapp.com/api/images/${image_id}/comments`,
             method: "GET",
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("jwt")}`
@@ -48,7 +48,7 @@ const Comment = (props) => {
         e.preventDefault()
         setInputComment("")
         Axios({
-            url:`http://localhost:5000/api/images/${image_id}/comments`,
+            url:`https://flasktagram.herokuapp.com/api/images/${image_id}/comments`,
             method:"POST",
             headers:{
                 Authorization:`Bearer ${localStorage.getItem("jwt")}`

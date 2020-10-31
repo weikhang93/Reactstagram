@@ -23,7 +23,7 @@ const UserImages = (props) => {
         // console.count("hehehe")
 
         Axios({
-            url: `http://localhost:5000/api/images?userId=${user_id}`,
+            url: `https://flasktagram.herokuapp.com/api/images?userId=${user_id}`,
             method: "GET"
 
         })
@@ -56,7 +56,7 @@ const UserImages = (props) => {
                     <CardBody>
                         <Link to={`/images/${image.id}`} >
 
-                            <Image width="100%" height="200px" src={image.url} ></Image>
+                            <Image width="100%" height="180px" src={image.url} ></Image>
                         </Link>
 
                     </CardBody>
