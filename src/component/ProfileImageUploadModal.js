@@ -71,7 +71,7 @@ const ProfileImageUploadModal = (props) => {
                 <ModalHeader toggle={toggle}>Update Profile Image</ModalHeader>
                 <ModalBody>
                     <Form onSubmit={handleSubmit} style={{ textAlign: "center" }}>
-                        {previewImage ? <img alt="previewImage" height="100%" width="auto" src={previewImage}></img> : null}
+                        {previewImage ? <img alt="previewImage" width="100%" src={previewImage}></img> : null}
                         <Input type="file" onChange={handleImage} />
 
 
