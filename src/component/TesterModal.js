@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import "../util/shake.css"
 
 const TesterModal = (props) => {
   const {
@@ -13,7 +14,7 @@ const TesterModal = (props) => {
 
   return (
     <div>
-      <Button className="ml-2 mt-2" outline color="info" onClick={toggle}>{buttonLabel}</Button>
+      <Button style={{fontSize:"1.4rem"}} className="ml-2 mt-2 shakeshake" outline color="info" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Tester Account</ModalHeader>
         <ModalBody>

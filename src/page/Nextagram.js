@@ -29,7 +29,7 @@ const Nextagram = () => {
     return <>
         <div className="d-flex justify-content-center mb-3">
 
-            <h1 className="text-center">Features</h1> <TesterModal buttonLabel="Tester"></TesterModal>
+            <h1 className="text-center">Features</h1> <TesterModal buttonLabel="Click ME!"></TesterModal>
         </div>
         <Container>
             <Row>
